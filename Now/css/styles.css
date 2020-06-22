@@ -30,6 +30,8 @@
 		box-shadow: 30px 10px 50px #efefef;
 		z-index:99;
 	}
+
+
 	.todo-table{background: #fff;
 	box-shadow:20px 20px 40px 40px #efefef ;
 	border-radius:4px;
@@ -61,7 +63,6 @@
 	}
 	.proceed:active{outline:none; }
 	.proceed:focus{outline:none;box-shadow: inset 0px 0px 50px #adadad;}
-
 
 	@media (max-width: 600px){
 		.proceed{transform:translate(3px, 10px);}

@@ -20,7 +20,6 @@ $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 
 // check if database is created
 if (mysqli_query($con,$sql)) {
-  echo "Database Created";
   $con = mysqli_connect($servername,$username,$password,$dbname);
 
   $sql = "CREATE TABLE IF NOT EXISTS items(
@@ -36,7 +35,6 @@ if (mysqli_query($con,$sql)) {
 
 
   if (mysqli_query($con,$sql)) {
-    echo "Table Created";
     return $con;
   }else {
     echo "Cannot create table";

@@ -19,26 +19,3 @@ a:focus {
     display: inline-flex;
     vertical-align: middle;
 }
-
- .iconic {
-  top: 10px;
-  position: relative;
-  font-size: 30px;
-}
-	.linebtn,.linebtn:hover{
-    position:relative;
-    width:0px; height:0px;
-    border-radius:0%;
-    background:#fff;
-    border:none;
-    color:white;
-    transition: box-shadow .2s, transform .4s;
-    cursor:pointer;
-  }
-  .linebtn:active{
-    color: inherit;
-    outline:none;
-  }
-  .red{color: red}
-.green{color: green}
-.blue{color: blue}

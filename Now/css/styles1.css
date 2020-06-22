@@ -119,12 +119,5 @@
 		::-webkit-inner-border { display: none; }
 	  ::-webkit-calendar-picker-indicator { background: transparent;}
 	}
-	.fa-calendar{
-		z-index: 10;
-		color: white;
-	}
-	button button:active{
-		outline: none;
-		border: none;
-	}
+
 	/* ##################################################################################################### */
