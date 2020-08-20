@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    color: var(--darkblue);
+    font-family: "Poppins",sans-serif;
+}
+
+:root {
+    --lightblue: #029DF4;
+    --darkblue: #08336D;
+    --herocolor: #E9FAFF;
+    --mygrey: #E9E9E9;
+    --brightblue: #08336D;
+    --transition1: all 1s ease 0s;
+    --centfont: #ADADAD;
+}
+
+
+.logo{
+    cursor: pointer;
+    z-index: 10;
+    padding: 50px 0 0 10px;
+}
+
+
+header {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 80px 70px rgba(173, 173, 173, 0.3);
+    border-radius: 40px;
+    min-height: 1700px;
+}
+
+nav {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list{
+    display: none;
+    transition: var(--transition1);
+}
+.nav__list li {
+    cursor: pointer;
+    transition: var(--transition1);
+    transition: 0.2s;
+}
+
+
+.nav__list .active__link {
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+.nav__list .active__link::after {
+    content: "";
+    width: inherit;
+    position: relative;
+    top: 8px;
+    display: block;
+    background-color: var(--lightblue);
+    border-radius: 3px;
+    height: 2px;
+}
+
+.nav__separate{
+    display: none;
+}
+.menu {
+    padding-top: 35px;
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.menu:hover .menu:active {
+    color: black;
+}
+
+.shapes {
+    z-index: 1;
+    position: relative;
+    top: 0px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.upper__curve__content {
+    padding-top: 10px;
+    max-height: 700px;
+} 
+.upper__curve {
+    position: relative;
+    left: 0px;
+    z-index: -1;
+    top: 0px;
+    background: #E9FAFF;
+    width: 240px;
+    height: 80px;
+    padding-top: 200px;
+    border-radius: 50px 0px 240px;
+}
+.humaans {
+    position: relative;
+    width: 70%;
+    padding-left: 15px;
+}
+.pose {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    padding-left: 15px;
+}
+.hero__text {
+    top: 150px;
+    position: relative;
+    padding-left: 15px;
+}
+form {
+    position: relative;
+    display: block;
+}
+.form-control {
+    width: 50%;
+    padding: 10px;
+    margin: 20px;
+}
+
+input {
+    background-color: #efefef;
+    border-radius: 40px;
+}
+.text {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 20px;
+}
+.text:focus {
+    outline: none;
+}
+.form_email {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 20px;
+}
+.send_message {
+    display: block;
+    border: none;
+    padding: 20px;
+    border-radius: 40px;
+    background: var(--lightblue);
+    color: white;
+    font-size: 17px;
+    width: 100%;
+}
+.form_email:focus {
+    outline: none;
+}
+
+.hero__font {
+    font-size: 20px;
+}
+
+.sub__font {
+    font-size: 16px;
+    width: 240px;
+    line-height: 30px;
+}
+
+
+.nav__separate__1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login__link__1 {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #08336D;
+    width: 92px;
+    height: 50px;
+    border-radius: 25px;
+    transition: 0.2s;
+
+}
+
+.get__app__button__1 {
+    width: 111px;
+    height: 50px;
+    background: #029DF4;
+    border-radius: 25px;
+    border: none;
+    transition: 0.2s;
+    color: white;
+}
+.login__link {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+.login__link__1:hover ,.login__link:hover,.nav__list li:hover,
+.get__app__button:hover,.get__app__button__1:hover,
+.get__started:hover,.feature1:hover, .feature2:hover,ul li:hover, .footer1:hover {
+    transform: scale(1.1,1.1);
+    transition: 0.2s;
+}
+.get__app__button {
+    width: 111px;
+    transition: 0.2s;
+    height: 50px;
+    font-size: 1em;
+    background: #029DF4;
+    border-radius: 25px;
+    border: none;
+    color: white;
+}
+.something {
+    position: relative;
+    margin-top: 30px;
+}
+.call_me {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0;
+
+}
+.background {
+    opacity: 0.6;
+    position: relative;
+    right: 20px;
+    bottom: -40px;
+    width: 100%;
+}
+.background1 {
+    z-index: -1;
+    opacity: 0.6;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    width: 80%;
+}
+.lower__curve {
+    right: 0;
+    bottom: 0px;
+    position:absolute;
+    width: 239px;
+    height: 233px;
+    background: #029DF4;
+    border-radius: 700px 0px 120px;
+}
+ul {
+    margin-left: -37px;
+    list-style-type: none;
+}
+ul li {
+    transition: 0.2s;
+
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright__in {
+    font-size: 14px;
+}
+
+
+@media only screen and (min-width: 310px) {
+    .lower__curve {
+        width: 270px;
+        height: 300px;
+    }
+    .upper__curve {
+        width: 270px;
+        height: 240px;
+    }
+    .mobile__mockup {
+        left: 120px;
+    }
+    
+       
+}
+
+@media only screen and (min-width: 350px) {
+    .lower__curve {
+        width: 290px;
+        border-radius: 700px 0px 90px;
+        height: 290px;
+    }
+    .upper__curve {
+        width: 290px;
+        height: 270px;
+    }
+    .login__link__1 {
+        width: 130px;
+        height: 55px;
+        font-size: 20px;
+        border-radius: 55px;
+    }
+    
+    .get__app__button__1 {
+        width: 151px;
+        height: 55px;
+        font-size: 20px;
+        border-radius: 55px;
+    }
+    
+}
+
+@media only screen and (min-width: 375px) {
+    .lower__curve {
+        width: 310px;
+        height: 300px;
+    }
+    .upper__curve {
+        width: 310px;
+        height: 270px;
+    }
+    nav {
+        padding-top: 30px;
+    }
+    .login__link__1 {
+        width: 130px;
+        height: 60px;
+        font-size: 19px;
+        border-radius: 55px;
+    }
+    
+    .get__app__button__1 {
+        width: 151px;
+        height: 60px;
+        font-size: 19px;
+        border-radius: 55px;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .lower__curve {
+        width: 350px;
+        height: 300px;
+    }
+    .upper__curve {
+        width: 350px;
+        height: 270px;
+    }
+    .nav__separate {
+        display: none;
+    }
+    .login__link__1 {
+        width: 130px;
+        height: 70px;
+        font-size: 20px;
+        border-radius: 55px;
+    }
+    
+    .get__app__button__1 {
+        width: 151px;
+        height: 70px;
+        font-size: 20px;
+        border-radius: 55px;
+    }
+        
+}
+
+@media only screen and (min-width: 580px) {
+    .lower__curve {
+        z-index: -1;
+        border-radius: 700px 0px 55px;
+        width: 540px;
+        height: 540px;
+    }
+    
+    .upper__curve {
+        border-radius: 40px 0px 540px;
+        width: 540px;
+        height: 470px;
+    }
+    .hero__text {
+        top: -380px;
+    }
+    .nav__separate__1 {
+        position: relative;
+        top: -410px;
+    }
+    .hero__font {
+        font-size: 28px;
+    }
+ 
+    
+    .background1 {
+        width: 50%;
+    }
+    .background {
+        width: 80%;
+        bottom: 40px;
+        position: absolute;
+
+    }
+    
+    .sub__font {
+        font-size: 16px;
+        width: 240px;
+    }
+    
+    .shapes {
+        height: 500px;
+    }
+        
+    
+    .ecclipse {
+        font-size: 30px;
+    }
+    .pose {
+        position: absolute;
+        left: unset;
+        right: 0;
+        width: 70%;
+    }
+        
+}
+
+
+@media only screen and (min-width: 750px) {
+    .lower__curve {
+        z-index: -1;
+        border-radius: 700px 0px 55px;
+        width: 600px;
+        height: 600px;
+    }
+    .upper__curve {
+        border-radius: 40px 0px 540px;
+        width: 600px;
+        height: 470px;
+    }
+    .nav__separate{
+        display: none;
+    }
+    .hero__text {
+        top: -400px;
+    }
+    
+    .nav__separate__1 {
+        position: relative;
+        top: -400px;
+    }
+    .hero__font {
+        font-size: 35px;
+    }
+ 
+    .email {
+        position: relative;
+        left: -15px;
+        padding-left: 20px;
+        box-shadow: none;
+        width: 440px;
+        height: 70px;    
+    }
+    
+    .sub__font {
+        font-size: 16px;
+        width: 240px;
+    }
+    .shapes {
+        height: 500px;
+    }
+        
+       
+} 
+
+
+@media only screen and (min-width: 950px) {
+    .nav__list{
+        display: inherit;
+    }
+    .nav__list li {
+        margin: 10px;
+    }    
+    .logo {
+        padding-bottom: 30px;
+    }
+    .leftside {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav {
+        height: 120px;
+        padding-top: 50px;
+    }
+    .nav__separate{
+        display: inherit;
+    }
+    
+    .menu {
+        display: none;
+    }
+       .lower__curve {
+        z-index: -1;
+        border-radius: 700px 0px 55px;
+        width: 700px;
+        height: 600px;
+    }
+    .upper__curve {
+        border-radius: 40px 0px 540px;
+        width: 700px;
+        height: 570px;
+    }
+    .hero__text {
+        top: -400px;
+    }
+    .nav__separate {
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .nav__separate__1 {
+        display: none;
+    }
+    .hero__font {
+        font-size: 40px;
+    }
+    .sub__font {
+        font-size: 18px;
+        width: 400px;
+    }
+    
+    .shapes {
+        height: 500px;
+    }
+    .ecclipse {
+        font-size: 25px;
+    }
+ 
+}
+@media only screen and (min-width: 1200px) {
+    header {
+        box-shadow: 0px 80px 70px rgba(173, 173, 173, 0.3);
+        border-radius: 70px;
+
+    }
+    .logo {
+        margin-left: 50px;
+        margin-right: 70px;
+    }
+    .nav__list li {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+
+        margin: 25px;
+    }
+    .hero__text {
+        padding-left: 70px;
+        padding-bottom: 0;
+    }
+    .humaans {
+        position: absolute;
+        top: 200px;
+        right: 130px;
+        width: 40%;
+        padding-left: 15px;
+    }
+    .pose {
+        position: absolute;
+        top: 350px;
+        right: 10px;
+        width: 50%;
+        padding-left: 15px;
+    }
+    .background {
+        opacity: 0.6;
+        position: absolute;
+        right: 50px;
+        bottom: 20px;
+        width: 70%;
+    }
+    .background1 {
+        opacity: 0.6;
+        position: absolute;
+        left: 50px;
+        top: -100px;
+        width: 40%;
+    }
+    form {
+        bottom: 200px;
+        left: 200px;
+        width: 50%;
+        position: relative;
+        display: block;
+    }
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin: 20px;
+    }
+    
+    input {
+        background-color: #efefef;
+        border-radius: 40px;
+    }
+    .text {
+        width: 100%;
+        display: block;
+        border: none;
+        padding: 20px;
+    }
+    .form_email {
+        padding: 20px;
+    }
+    .send_message {
+        font-size: 17px;
+    }
+        
+    .lower__curve {
+        z-index: -1;
+        border-radius: 700px 0px 70px;
+        width: 650.25px;
+        height: 634.01px;
+    }
+    .icons {
+        left: 676px;
+        top: 200px;
+    }
+    .upper__curve {
+        border-radius: 100px 0px 1000px;
+        width: 943.88px;
+        height: 595.68px;
+    }
+    .get__app__button {
+        width: 176.62px;
+        height: 50px;
+        font-size: 1em;
+        background: #029DF4;
+        border-radius: 25px;
+        border: none;
+        color: white;
+    }
+    
+}
+
+
+@media only screen and (max-width: 280px) {
+    .lower__curve {
+        z-index: -1;
+        width: 80%;
+        height: 204.01px;
+    }
+    .upper__curve {
+        width: 90%;
+        height: 205.68px;
+    }
+    .nav__separate__1 {
+        position: relative;
+        padding-left: 0;
+        left: -10px;
+    }
+    .hero__text {
+        padding-left: 5px;
+    }
+    
+    .hero__font {
+        font-size: 20px;
+    }
+    
+    .sub__font {
+        font-size: 14px;
+        width: 170px;
+    }
+    .login__link__1 {
+        margin-left: 10px;
+    }
+    .copyright__in {
+        font-size: 11px;
+    }
+}
+
+
+
+
+

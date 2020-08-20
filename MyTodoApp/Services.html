@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" type="image/x-icon" href="./Images/Logo.svg">
+        <title>Plan your day</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./services.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="upper__curve">
+                                   
+                </div>
+                <nav>
+                   <div class="leftside">
+                    <picture>
+                        <source srcset="./Images/logo-small.svg" media="(max-width: 370px)">
+                        <source srcset="./Images/logo-med.svg" media="(max-width: 750px)">
+                        <source srcset="./Images/logo-ipad.svg" media="(max-width: 900px)">
+                        <source srcset="./Images/Logo.svg">
+                            <img src="./Images/Logo.svg" alt="" class="logo">
+                    </picture>
+                    <ul class="nav__list" id="nav__list">
+                        <li class="btn"><a href="./StartPage.html">Home</a></li>
+                        <li class="btn active__link"><a href="./Services.html">Services</a></li>
+                        <li class="btn"><a href="./About_us.html">About</a></li>
+                        <li class="btn"><a href="./Contact_us.html">Contact us</a></li>
+                    </ul>
+                   </div>
+                    <ul class="nav__separate">
+                        <li class="login__link">Login</li>
+                        <li><button type="submit" class="get__app__button">Get App</button></li>
+                    </ul>
+                    <div class="menu">&#9776;</div>
+                </nav>
+                <img class="pose" src="./Images/pose_1.png" alt="">
+                <section class="shapes">
+                    <section class="upper__curve__content">
+                        
+                       
+                        
+                        <div class="hero__text">
+                            <img src="./Images/background.svg" class="background1" alt="">
+
+                            <div class="hero__font">
+                                <h1>Save Time.<br>No Stress</h1>
+                            </div>
+                            <div class="sub__font">
+                                <p>A day activity tracking app at your doorstep to help you track your daily activities without stressing out.
+                                    Now you don't have to download several application softwares for this task.This is all you need</p>
+                            </div>
+                            <div class="hero__font">
+                                <div class="ellipse"><h1>4.2</h1></div>
+                            </div>
+                            <div class="sub__font">
+                                <p>This application has an average rating of 4.2 due to the assistance it gives to our customers.
+                                    It has an accurate operation of all tasks given to 
+                                    it. Amazing features are added simultaneously as required by the user</p>
+                            </div>
+                            <div class="hero__font">
+                                <div class="ellipse"><h1>24 HRS</h1></div>
+                            </div>
+                            <div class="sub__font">
+                                <p>Skedular is a 24-hour functioning application. This means users never loose track of 
+                                    information. Necessary security and privacy terms have been set and met for the user's maximum experience 
+                                    and convinience.</p>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    
+                </section>
+                <div class="lower__curve">
+                    <img src="./Images/background.svg" class="background" alt="">
+
+                </div>
+            </header>
+            <section class="copyright">
+            <p class="copyright__in">Copyright &#169; 2020 . All rights reserved.</p>
+            </section>
+        </main>   
+        <script src="" async defer></script>
+        <script>
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("nav__list");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+              var current = document.getElementsByClassName("active__link");
+              current[0].className = current[0].className.replace(" active__link", "");
+              this.className += " active__link";
+              });
+            }
+            </script>
+    </body>
+</html>
+
