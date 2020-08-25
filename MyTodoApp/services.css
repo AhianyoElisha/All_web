@@ -40,6 +40,7 @@ nav {
     position: absolute;
     width: 100%;
     height: 90px;
+    transition: 0.7s ease-in-out;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +52,7 @@ nav {
 .nav__list li {
     cursor: pointer;
     transition: var(--transition1);
-    transition: 0.2s;
+    transition: 0.8s ease-in-out;
 }
 
 
@@ -61,11 +62,12 @@ nav {
 a {
     text-decoration: none;
 }
-.nav__list .active__link::after {
+ .active__link::after {
     content: "";
     width: inherit;
     position: relative;
     top: 8px;
+    transition: 1s ease-in-out;
     display: block;
     background-color: var(--lightblue);
     border-radius: 3px;
@@ -118,6 +120,7 @@ a {
 .pose {
     position: absolute;
     width: 100%;
+    transition: 1.2s ease-in-out;
     top: 100px;
     padding-left: 15px;
 }
@@ -170,10 +173,12 @@ input {
 }
 
 .hero__font {
+    transition: 0.7s ease-in-out;
     font-size: 20px;
 }
 
 .sub__font {
+    transition: 10.9s ease-in-out;
     font-size: 16px;
     width: 240px;
     line-height: 30px;
@@ -235,6 +240,13 @@ input {
     border: none;
     color: white;
 }
+.get__app__button a {
+    color: white;
+}
+.get__app__button:focus,.get__app__button__1:focus {
+    outline: none;
+}
+
 .something {
     position: relative;
     margin-top: 30px;
@@ -290,6 +302,48 @@ ul li {
     font-size: 14px;
 }
 
+.overlay{
+    height: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow-x: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(154, 152, 250, 0.9);
+    transition: all 0.7s ease 0s;
+}
+
+.overlay__content{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay__content li {
+    list-style-type: none;
+}
+
+.overlay li a {
+    padding: 15px;
+    font-size: 26px;
+    display: block;
+    transition: all 0.7s ease 0s;
+}
+
+.overlay li a:hover, .overlay li a:focus {
+    color: #0088a9;
+}
+.overlay .close {
+    position: absolute;
+    top: 42px;
+    right: 40px;
+    font-size: 40px;
+}
+
 
 @media only screen and (min-width: 310px) {
     .lower__curve {
@@ -303,7 +357,11 @@ ul li {
     .mobile__mockup {
         left: 120px;
     }
-    
+    .overlay .close {
+        right: 40px;
+        top: 42px;
+    }      
+ 
        
 }
 
@@ -330,7 +388,10 @@ ul li {
         font-size: 20px;
         border-radius: 55px;
     }
-    
+    .overlay .close {
+        right: 40px;
+        top: 58px;
+    }
 }
 
 @media only screen and (min-width: 375px) {

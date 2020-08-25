@@ -32,15 +32,15 @@ header {
     z-index: 1;
     box-shadow: 0px 80px 70px rgba(173, 173, 173, 0.3);
     border-radius: 40px;
-    min-height: 1400px;
+    min-height: 800px;
 }
 
 nav {
     top: 0;
     position: absolute;
     width: 100%;
-    height: 90px;
     transition: 0.7s ease-in-out;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,6 +53,7 @@ nav {
     cursor: pointer;
     transition: var(--transition1);
     transition: 0.8s ease-in-out;
+
 }
 
 .nav__list .active__link {
@@ -60,7 +61,6 @@ nav {
 }
 a {
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
 }
 .nav__list::after  {
     content: "";
@@ -78,8 +78,8 @@ a {
     width: inherit;
     position: relative;
     top: 8px;
-    transform: scaleX(1);
     transition: 1s ease-in-out;
+    transform: scaleX(1);
     display: block;
     background-color: var(--lightblue);
     border-radius: 3px;
@@ -104,32 +104,29 @@ a {
 .shapes {
     z-index: 1;
     position: relative;
-    top: 0px;
+    top: 20px;
+    text-align: center;
     padding-left: 5px;
     width: 100%;
 }
 
 .upper__curve__content {
     padding-top: 10px;
-    max-height: 700px;
+    max-height: 400px;
 } 
 .upper__curve {
     position: relative;
     left: 0px;
     z-index: -1;
-    top: 0px;
     background: #E9FAFF;
     width: 240px;
     height: 80px;
-    padding-top: 200px;
     border-radius: 50px 0px 240px;
 }
 .humaans {
-    transition: 1.2s ease-in-out;
-    position: absolute;
-    width: 100%;
-    top: 50px;
-    padding-left: 10px;
+    position: relative;
+    width: 70%;
+    padding-left: 15px;
 }
 .pose {
     position: relative;
@@ -137,42 +134,86 @@ a {
     padding-left: 15px;
 }
 .hero__text {
+    top: 10px;
+    text-align: left;
     position: relative;
     padding-left: 15px;
-    transition: 0.5s ease-in-out;
     padding-bottom: 0px;
 }
 form {
-    width: 100%;
+    transition: 0.2s ease-in-out;
+    padding: 20px 10px 20px 10px;
+    height: unset;
+    text-align: center;
+    border-radius: 30px;
+    border:  1px solid rgba(173, 173, 250, 0.1);
+    box-shadow: 0px 50px 40px rgba(100, 100, 250, 0.3);
+    width: 90%;
+    top: 0px;
     position: relative;
-    display: block;
-    padding-bottom: 200px;
-    bottom: -60px;
+    display: inline-block;
+    padding-bottom: 100px;
 }
 .form-control {
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding: 10px;
-    margin: 0px;
+}
+.inside__password {
+    width: inherit;
+    transition: 1.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.passToggle {
+    display: flex;
+    transition: 1.4s ease-in-out;
+    position: relative;
+    align-items: center;
+}
+
+.far{
+    cursor: pointer;
+    right: 20px;
+    font-size: 19px;
+    position: absolute;
 }
 
 input {
     background-color: #efefef;
     border-radius: 40px;
+    margin: 10px 0;
 }
 .send_message:active, .send_message:focus {
     outline: none;
 }
 .text {
-    width: 100%;
+    width: inherit;
+    transition: 1.2s ease-in-out;
     display: block;
     border: none;
     padding: 20px;
+}
+.password {
+    border: none;
+    font-size: 16px;
+    transition: 1.4s ease-in-out;
+    padding: 20px;
+    width: 100%;
+}
+.password:focus {
+    background-color: #efefff;
+    outline: none;
 }
 .text:focus {
     background-color: #efefff;
     outline: none;
 }
 .form_email {
+    transition: 1.4s ease-in-out;
     width: 100%;
     display: block;
     border: none;
@@ -182,6 +223,7 @@ input {
     display: block;
     border: none;
     padding: 20px;
+    transition: 1.6s ease-in-out;
     border-radius: 40px;
     background: var(--darkblue);
     color: white;
@@ -196,18 +238,22 @@ input {
 
 .hero__font {
     font-size: 20px;
-    transition: 0.9s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .sub__font {
+    transition: 1.7s ease-in-out;
     font-size: 16px;
     width: 240px;
-    transition: 0.7s ease-in-out;
     line-height: 30px;
 }
 
 
 .nav__separate__1 {
+    position: relative;
+    top: 50px;
+    display: inline-block;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -218,8 +264,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #08336D;
-    width: 92px;
+    width: 62px;
     height: 50px;
     border-radius: 25px;
     transition: 0.2s;
@@ -246,7 +291,7 @@ input {
     border-radius: 25px;
     transition: 0.2s;
 }
-.login__link__1:hover ,.login__link:hover,.nav__list li:hover,.send_message:hover,
+.login__link__1:hover ,.login__link:hover,.nav__list li:hover,.send_message:hover,form:hover,
 .get__app__button:hover,.get__app__button__1:hover,
 .get__started:hover,.feature1:hover, .feature2:hover,ul li:hover, .footer1:hover {
     transform: scale(1.1,1.1);
@@ -265,10 +310,10 @@ input {
 .get__app__button a {
     color: white;
 }
+
 .get__app__button:focus,.get__app__button__1:focus {
     outline: none;
 }
-
 
 
 .lower__curve {
@@ -302,23 +347,7 @@ input {
     top: 40px;
     width: 80%;
 }
-.display {
-    position: relative;
-    max-width: 450px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.skill {
-    transition: 0.8s ease-in-out;
-    display: flex;
-    margin: auto 20px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
+
 
 ul {
     margin-left: -37px;
@@ -378,10 +407,9 @@ ul li {
 .overlay .close {
     position: absolute;
     right: 40px;
-    top: 58px;
+    top: 42px;
     font-size: 40px;
 }
-
 
 
 @media only screen and (min-width: 310px) {
@@ -396,11 +424,10 @@ ul li {
     .shadow {
         display: none;
     }
-    .overlay .close {
-        right: 40px;
-        top: 58px;
-    }   
-   
+    .shapes {
+        top: -110px;
+    }
+       
 }
 
 @media only screen and (min-width: 350px) {
@@ -414,16 +441,16 @@ ul li {
         height: 270px;
     }
     .login__link__1 {
-        width: 130px;
+        width: 110px;
         height: 55px;
-        font-size: 20px;
+        font-size: 16px;
         border-radius: 55px;
     }
     
     .get__app__button__1 {
-        width: 151px;
+        width: 140px;
         height: 55px;
-        font-size: 20px;
+        font-size: 16px;
         border-radius: 55px;
     }
     
@@ -442,19 +469,7 @@ ul li {
     nav {
         padding-top: 30px;
     }
-    .login__link__1 {
-        width: 130px;
-        height: 60px;
-        font-size: 19px;
-        border-radius: 55px;
-    }
     
-    .get__app__button__1 {
-        width: 151px;
-        height: 60px;
-        font-size: 19px;
-        border-radius: 55px;
-    }
 }
 
 @media only screen and (min-width: 400px) {
@@ -470,21 +485,20 @@ ul li {
         display: none;
     }
     .login__link__1 {
-        width: 130px;
-        height: 70px;
-        font-size: 20px;
+        width: 100px;
+        height: 50px;
+        font-size: 16px;
         border-radius: 55px;
     }
-    .humaans {
-        width: 80%;
-        right: 0;
-        top: 100px;
-    }
+    
     .get__app__button__1 {
-        width: 151px;
-        height: 70px;
-        font-size: 20px;
+        width: 100px;
+        height: 50px;
+        font-size: 16px;
         border-radius: 55px;
+    }
+    .overlay .close {
+        top: 58px;
     }
     
 }
@@ -505,9 +519,13 @@ ul li {
         top: -380px;
     }
     
+    .shapes {
+    top: 0px;
+    }
     .nav__separate__1 {
         position: relative;
-        top: -410px;
+        bottom: 20px;
+        top: unset;
     }
     .hero__font {
         font-size: 28px;
@@ -527,15 +545,19 @@ ul li {
     }
     .humaans {
         position: absolute;
-        right: 0px;
+        right: 40px;
         top: 200px;
-        width: 70%;
+        width: 40%;
         padding-left: 15px;
-    }           
+    }  
+    .shapes {
+        text-align: unset;
+    }         
     form {
+        top: -300px;
+        padding-bottom: 20px;
         width: 90%;
-        position: absolute;
-        bottom: 0px;
+        position: relative;
     }
     .email {
         position: relative;
@@ -550,9 +572,9 @@ ul li {
         font-size: 16px;
         width: 240px;
     }
-    .shapes {
+    /* .shapes {
         height: 500px;
-    }
+    } */
         
     .ecclipse {
         font-size: 30px;
@@ -580,21 +602,43 @@ ul li {
         top: -400px;
     }
     form {
-        width: 70%;
-        position: absolute;
-        bottom: 0px;
+        top: -200px;
     }
     
-    .nav__separate__1 {
+    /* .nav__separate__1 {
         position: relative;
-        top: -400px;
-    }
+        top: 150px;
+    }*/
+    .get__app__button__1 {
+        box-shadow: 0px 50px 40px rgba(100, 100, 250, 0.3);
+    } 
     .hero__font {
+        position: absolute;
+        top: 100px;
         font-size: 35px;
     }
-    .call_me {
-        width: 60%;
-    
+    .far{
+        right: 20px;
+        position: absolute;
+    }
+       .form_email {
+           font-size: 16px;
+        width: 45%;   
+        padding: 20px;
+    }
+    .text {
+        width: 45%;
+        display: block;
+        border: none;
+        padding: 20px;
+    }
+    .form-control {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .inside__password {
+        width: 45%;
+        position: relative;
     }
     .background1 {
         width: 40%;
@@ -611,7 +655,7 @@ ul li {
     }
     
     .shapes {
-        height: 500px;
+        padding-left: 30px;
     }
         
     .ecclipse {
@@ -665,6 +709,7 @@ ul li {
     .hero__text {
         top: -400px;
     }
+   
     .nav__separate {
         margin-right: 30px;
         display: flex;
@@ -680,12 +725,6 @@ ul li {
     .sub__font {
         font-size: 18px;
         width: 400px;
-    }
-    .something {
-        height: 600px;
-    }
-    .shapes {
-        height: 500px;
     }
         
     .ecclipse {
@@ -711,7 +750,7 @@ ul li {
         margin: 25px;
     }
     .hero__text {
-        padding-left: 70px;
+        padding-left: 0px;
         padding-bottom: 0;
     }
     .background {
@@ -728,13 +767,10 @@ ul li {
         top: -100px;
         width: 40%;
     }
-    .humaans {
-        position: absolute;
-        top: 200px;
-        right: 0px;
-        width: 60%;
-        padding-left: 15px;
+    .hero__font {
+        top: unset;
     }
+   
     .pose {
         position: absolute;
         top: 350px;
@@ -743,17 +779,22 @@ ul li {
         padding-left: 15px;
     }
     
-    form {
-        width: 50%;
-        bottom: 0px;
-        left: 30px;
-        position: absolute;
+     form {
+        transition: 0.2s ease-in-out;
+        padding: 40px 40px 40px 0px;
+        border-radius: 30px;
+        border:  1px solid rgba(173, 173, 250, 0.1);
+        box-shadow: 0px 50px 40px rgba(100, 100, 250, 0.3);
+        width: 70%;
+        height: unset;
+        bottom: 100px;
+        left: 70px;
         display: block;
-    }
+    } 
     .form-control {
         width: 100%;
+        justify-content: space-around;
         padding: 10px;
-        margin: 20px;
     }
     
     input {
@@ -761,17 +802,27 @@ ul li {
         border-radius: 40px;
         font-size: 18px;
     }
+    .inside__password {
+        width: 40%;
+        position: relative;
+    }
     .text {
-        width: 100%;
+        width: 40%;
         display: block;
         border: none;
         padding: 20px;
     }
-    .form_email {
+    .far{
+        right: 20px;
+        position: absolute;
+    }
+       .form_email {
+        width: 40%;   
         padding: 20px;
     }
     .send_message {
         font-size: 17px;
+        width: 90%;
     }
     .call_me {
         position: absolute;
@@ -779,27 +830,7 @@ ul li {
         top: 100px;
         right: 100px;
     }
-    .display {
-        position: relative;
-        max-width: 450px;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .skill {
-        display: flex;
-        margin: auto 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .skill h4 {
-        font-weight: 400;
-        font-size: 18px;
-    }
-           
+   
     .lower__curve {
         z-index: -1;
         border-radius: 700px 0px 70px;
@@ -820,7 +851,9 @@ ul li {
         border: none;
         color: white;
     }
-    
+    .shapes {
+        padding-left: 70px;
+    }    
     
 }
 
@@ -831,20 +864,21 @@ ul li {
         width: 80%;
         height: 204.01px;
     }
-    .humaans {
-        top: 100px;
-    }
-    header {
-        min-height: 1650px;
-    }
     .upper__curve {
         width: 90%;
         height: 205.68px;
+    }
+    .logo {
+        width: 100%;
     }
     .nav__separate__1 {
         position: relative;
         padding-left: 0;
         left: -10px;
+    }
+    .shapes {
+        top: -110px;
+        position: relative;
     }
     .hero__text {
         padding-left: 5px;

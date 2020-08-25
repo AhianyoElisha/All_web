@@ -6,7 +6,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" type="image/x-icon" href="./Images/Logo.svg">
+        <link rel="shortcut icon" type="image/x-icon" href="./Images/title_logo.svg">
+        <script src="https://kit.fontawesome.com/ffc2004906.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <title>Plan your day</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,14 +35,14 @@
                         <li class="btn"><a href="./StartPage.html">Home</a></li>
                         <li class="btn"><a href="./Services.html">Services</a></li>
                         <li class="btn"><a href="./About_us.html">About</a></li>
-                        <li class="btn active__link"><a href="./Contact_us.html">Contact us</a></li>
+                        <li class="btn active__link"><a href=" ">Contact us</a></li>
                     </ul>
                    </div>
                     <ul class="nav__separate">
-                        <li class="login__link">Login</li>
-                        <li><button type="submit" class="get__app__button">Get App</button></li>
+                        <li class="login__link"><a href="./login.html">Login</a></li>
+                        <li><a href="./getApp.html"><button type="submit" class="get__app__button">Get App</button></a></li>
                     </ul>
-                    <div class="menu">&#9776;</div>
+                    <a onclick="openNav()" class="menu" id="menu" href="#">&#9776;</a>
                 </nav>
                 <img src="./Images/call.png" class="call_me" alt="">
                 <section class="shapes">
@@ -60,7 +63,7 @@
                        </section>
                        <form action="" method="post">
                         <div class="form-control">
-                            <input type="text" name="" id="" class="text" placeholder="Name/ Username">
+                            <input type="text" name="" id="" class="text" placeholder="Name/ Username" autofocus>
                         </div>
                         <div class="form-control">
                             <input type="email"  id="email" class="form_email" placeholder="email">
@@ -80,6 +83,17 @@
             <p class="copyright__in">Copyright &#169; 2020 . All rights reserved.</p>
             </section>
         </main>   
+        <div id="mobile__menu" class="overlay">
+            <a onclick="closeNav()" class="close" href="#">&times;</a>
+            <div class="overlay__content" id="overlay__content">
+                <li class="btn"><a href="./StartPage.html">Home</a></li>
+                <li class="btn"><a href="./Services.html">Services</a></li>
+                <li class="btn"><a href="./About_us.html">About</a></li>
+                <li class="btn active__link"><a href="./Contact_us.html">Contact us</a></li>
+                <li class="btn"><a href="./login.html">Login</a></li>
+                <li class="btn"><a href="./signUp.html">Sign Up</a></li>
+            </div>
+        </div>
         <script src="" async defer></script>
         <script>
             // Add active class to the current button (highlight it)
@@ -91,6 +105,17 @@
               current[0].className = current[0].className.replace(" active__link", "");
               this.className += " active__link";
               });
+            }
+        </script>
+        <script type="text/javascript" async defer>
+            function openNav() {
+                document.getElementById("mobile__menu").style.height="100%";
+                document.getElementById("overlay__content").style.height="100%";
+                document.getElementById("menu").style.display="none";
+                }
+            function closeNav() {
+                document.getElementById("menu").style.display="inherit";
+                document.getElementById("mobile__menu").style.height="0";
             }
             </script>
     </body>

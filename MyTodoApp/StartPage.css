@@ -14,28 +14,6 @@
     --herocolor: #E9FAFF;
     --mygrey: #E9E9E9;
     --brightblue: #08336D;
-    --transition1: all 1s ease 0s;
-    --transition1: all 0.7s ease 0s;
-    --transition2: all 1s ease 0.03s;
-    --transition3: all 1.4s ease 0s;
-    --transition4: all 1.8s ease 0s;
-    --transition5: all 1.0s ease 0s;
-    --transition6: all 1.4s ease 0s;
-    --transition7: all 1.8s ease 0.04s; 
-    --transition8: all 1s ease 0.09s;
-    --transition9: all 1s ease 0.04s;
-    --transition10: all 1s ease 0.08s;
-    --transition11: all 1s ease 0.09s;
-    --transition12: all 1s ease 0.1s;
-    --transition13: all 1s ease 0.4s;
-    --transition14: all 1s ease 0.7s;
-    --transition15: all 1.3s ease 1s;
-    --transition16: all 1.7s ease 1.3s;
-    --transition17: all 1s ease 1.7s;
-    --transition18: all 1s ease 1.9s;
-    --transition19: all 1s ease 1.1s;
-    --transition20: all 1s ease 1.4s;
-    --transition21: all 1s ease 1.8s;
     --centfont: #ADADAD;
 }
 
@@ -44,6 +22,7 @@
     cursor: pointer;
     z-index: 10;
     padding: 50px 0 0 10px;
+    transition: 0.5s ease-in-out;
 }
 
 main {
@@ -67,7 +46,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: var(--transition1);
+    transition: 0.7s ease-in-out;
 }
 .nav__list{
     display: none;
@@ -75,7 +54,7 @@ nav {
 .nav__list li {
     transition: var(--transition12);
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.8s ease-in-out;
 }
 
 .nav__list .active__link {
@@ -84,9 +63,10 @@ nav {
 a {
     text-decoration: none;
 }
-.nav__list .active__link::after {
+ .active__link::after {
     content: "";
     width: inherit;
+    transition: 1s ease-in-out;
     position: relative;
     top: 8px;
     display: block;
@@ -145,6 +125,7 @@ a {
 .hero__text {
     position: relative;
     padding-left: 15px;
+    transition: 0.5s ease-in-out;
 }
 
 .hero__font {
@@ -199,6 +180,10 @@ a {
     border-radius: 25px;
     transition: 0.2s;
 }
+.get__app__button a {
+    color: white;
+}
+
 .login__link__1:hover ,.login__link:hover,.nav__list li:hover,
 .get__app__button:hover,.get__app__button__1:hover,
 .get__started:hover,.feature1:hover, .feature2:hover,ul li:hover, .footer1:hover {
@@ -218,6 +203,7 @@ a {
 .mobile__mockup {
     position: absolute;
     top: 110px;
+    transition: 1.2s ease-in-out;
     left: 94px;
     overflow-x: hidden;
     transform: rotate(-19deg);
@@ -265,7 +251,7 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 2px 20px rgba(154, 152, 250, 0.3);
     border-radius: 82px;
-    width: 239px;
+    width: 230px;
     height: 50px;    
 }
 .email:focus {
@@ -287,6 +273,7 @@ button:focus {
 }
 
 .features {
+    transition: 1s ease-in-out;
     align-items: center;
     margin: 40px 0 150px 0;
     display: flex;
@@ -421,6 +408,49 @@ ul li {
 .copyright__in {
     font-size: 14px;
 }
+.overlay{
+    height: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow-x: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(154, 152, 250, 0.9);
+    transition: all 0.7s ease 0s;
+}
+
+.overlay__content{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay__content li {
+    list-style-type: none;
+}
+
+.overlay li a {
+    padding: 15px;
+    font-size: 26px;
+    display: block;
+    transition: all 0.7s ease 0s;
+}
+
+.overlay li a:hover, .overlay li a:focus {
+    color: #0088a9;
+}
+.overlay .close {
+    position: absolute;
+    right: 40px;
+    top: 42px;
+    font-size: 40px;
+}
+
+
 
 
 @media only screen and (min-width: 310px) {
@@ -438,7 +468,9 @@ ul li {
     .mobile__mockup {
         left: 120px;
     }
-    
+    .overlay .close {
+        top: 58px;
+    }      
        
 }
 
@@ -487,11 +519,11 @@ ul li {
     .email {
         padding-left: 15px;
         font-size: 20px;
-        width: 310px;
+        width: 210px;
         height: 55px;    
     }
     .get__started {
-        width: 170px;
+        width: 120px;
         font-size: 20px;
         height: 55px;
         border-radius: 76px;
@@ -546,11 +578,11 @@ ul li {
     .email {
         padding-left: 15px;
         font-size: 19px;
-        width: 330px;
+        width: 230px;
         height: 60px;    
     }
     .get__started {
-        width: 170px;
+        width: 130px;
         font-size: 20px;
         height: 70px;
         border-radius: 76px;
@@ -603,16 +635,18 @@ ul li {
     .email {
         padding-left: 15px;
         font-size: 20px;
-        width: 350px;
+        width: 250px;
         height: 70px;    
     }
     .get__started {
-        width: 170px;
+        width: 140px;
         font-size: 20px;
         height: 70px;
         border-radius: 76px;
     }
-        
+    .overlay .close {
+        top: 58px;
+    }     
 }
 
 @media only screen and (min-width: 580px) {
@@ -676,7 +710,7 @@ ul li {
         left: -15px;
         padding-left: 20px;
         box-shadow: none;
-        width: 440px;
+        width: 350px;
         height: 70px;    
     }
     
@@ -689,7 +723,7 @@ ul li {
         position: relative;
         top: -15px;
         right: 0px;
-        width: 200px;
+        width: 150px;
         font-size: 20px;
         height: 70px;
         border-radius: 76px;
@@ -786,7 +820,7 @@ ul li {
         left: -15px;
         padding-left: 20px;
         box-shadow: none;
-        width: 440px;
+        width: 340px;
         height: 70px;    
     }
     
@@ -799,7 +833,7 @@ ul li {
         position: relative;
         top: -15px;
         right: 0px;
-        width: 200px;
+        width: 150px;
         font-size: 20px;
         height: 70px;
         border-radius: 76px;
@@ -827,7 +861,7 @@ ul li {
     }
     .background {
         position: absolute;
-        width: 80%;
+        width: 70%;
         bottom: 50px;
     }    
     .feature2 {
@@ -902,7 +936,7 @@ ul li {
     }
     .mobile__mockup {
         top: 220px;
-        left: 520px;
+        left: 580px;
         transform: rotate(-19deg);
     }
     .nav__separate {
@@ -949,10 +983,10 @@ ul li {
     }
     
     .get__started {
-        position: relative;
+        position: absolute;
         top: -15px;
         right: 0px;
-        width: 250px;
+        width: 150px;
         font-size: 20px;
         border-radius: 76px;
     }
@@ -1048,7 +1082,6 @@ ul li {
         top: -15px;
         right: 0px;
         width: 195px;
-        font-family: Roboto;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;

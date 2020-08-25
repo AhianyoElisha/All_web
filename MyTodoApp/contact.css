@@ -22,6 +22,7 @@
 .logo{
     cursor: pointer;
     z-index: 10;
+    transition: 0.5s ease-in-out;
     padding: 50px 0 0 10px;
 }
 
@@ -41,17 +42,18 @@ nav {
     width: 100%;
     height: 90px;
     display: flex;
+    transition: 0.7s ease-in-out;
     justify-content: space-between;
     align-items: center;
 }
 .nav__list{
     display: none;
-    transition: var(--transition1);
+
 }
 .nav__list li {
     cursor: pointer;
     transition: var(--transition1);
-    transition: 0.2s;
+    transition: 0.8s ease-in-out;
 }
 
 .nav__list .active__link {
@@ -76,6 +78,7 @@ a {
     width: inherit;
     position: relative;
     top: 8px;
+    transition: 1s ease-in-out;
     transform: scaleX(1);
     display: block;
     background-color: var(--lightblue);
@@ -101,6 +104,7 @@ a {
 .shapes {
     z-index: 1;
     position: relative;
+    text-align: center;
     top: 0px;
     padding-left: 5px;
     width: 100%;
@@ -132,16 +136,26 @@ a {
     padding-left: 15px;
 }
 .hero__text {
+    text-align: left;
+    transition: 0.5s ease-in-out;
     position: relative;
+    padding-top: 30px;
     padding-left: 15px;
     padding-bottom: 0px;
 }
 form {
-    width: 100%;
+    margin-top: 50px;
+    transition: 1s ease-in-out;
+    padding: 20px 10px 20px 10px;
+    height: 300px;
+    text-align: center;
+    border-radius: 30px;
+    border:  1px solid rgba(173, 173, 250, 0.1);
+    box-shadow: 0px 50px 40px rgba(100, 100, 250, 0.3);
+    width: 90%;
     position: relative;
-    display: block;
-    padding-bottom: 200px;
-    bottom: -60px;
+    display: inline-block;
+    bottom: 60px;
 }
 .form-control {
     width: 100%;
@@ -157,6 +171,7 @@ input {
     outline: none;
 }
 .text {
+    transition: 1.2s ease-in-out;
     width: 100%;
     display: block;
     border: none;
@@ -167,12 +182,14 @@ input {
     outline: none;
 }
 .form_email {
+    transition: 1.4s ease-in-out;
     width: 100%;
     display: block;
     border: none;
     padding: 20px;
 }
 .send_message {
+    transition: 1.6s ease-in-out;
     display: block;
     border: none;
     padding: 20px;
@@ -189,10 +206,12 @@ input {
 }
 
 .hero__font {
+    transition: 0.6s ease-in-out;
     font-size: 20px;
 }
 
 .sub__font {
+    transition: 0.9s ease-in-out;
     font-size: 16px;
     width: 240px;
     line-height: 30px;
@@ -238,11 +257,15 @@ input {
     border-radius: 25px;
     transition: 0.2s;
 }
+.get__app__button a {
+    color: white;
+}
+
 .login__link__1:hover ,.login__link:hover,.nav__list li:hover,.send_message:hover,
-.get__app__button:hover,.get__app__button__1:hover,
+.get__app__button:hover,.get__app__button__1:hover,form:hover,
 .get__started:hover,.feature1:hover, .feature2:hover,ul li:hover, .footer1:hover {
     transform: scale(1.1,1.1);
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
 }
 .get__app__button {
     width: 111px;
@@ -254,7 +277,9 @@ input {
     border: none;
     color: white;
 }
-
+.get__app__button:focus,.get__app__button__1:focus {
+    outline: none;
+}
 
 .lower__curve {
     right: 0;
@@ -267,8 +292,9 @@ input {
 }
 .call_me {
     position: absolute;
+    transition: 1.2s ease-in-out;
     width: 100%;
-    top: 60px;
+    top: 80px;
     right: 0;
 
 }
@@ -308,6 +334,47 @@ ul li {
 .copyright__in {
     font-size: 14px;
 }
+.overlay{
+    height: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow-x: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(154, 152, 250, 0.9);
+    transition: all 0.7s ease 0s;
+}
+
+.overlay__content{
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay__content li {
+    list-style-type: none;
+}
+
+.overlay li a {
+    padding: 15px;
+    font-size: 26px;
+    display: block;
+    transition: all 0.7s ease 0s;
+}
+
+.overlay li a:hover, .overlay li a:focus {
+    color: #0088a9;
+}
+.overlay .close {
+    position: absolute;
+    top: 58px;
+    right: 40px;
+    font-size: 40px;
+}
 
 
 @media only screen and (min-width: 310px) {
@@ -322,7 +389,9 @@ ul li {
     .shadow {
         display: none;
     }
-       
+    .overlay .close {
+        top: 58px;
+    }   
 }
 
 @media only screen and (min-width: 350px) {
@@ -360,6 +429,9 @@ ul li {
     .upper__curve {
         width: 310px;
         height: 270px;
+    }
+    .call_me {
+        top: 90px;
     }
     nav {
         padding-top: 30px;
@@ -450,10 +522,14 @@ ul li {
         width: 40%;
         padding-left: 15px;
     }           
+    .shapes {
+        text-align: unset;
+    }
     form {
         width: 90%;
         position: absolute;
-        bottom: 0px;
+        bottom: 250px;
+        margin-left: 25px;
     }
     .email {
         position: relative;
@@ -499,8 +575,9 @@ ul li {
     }
     form {
         width: 70%;
+        left: 70px;
         position: absolute;
-        bottom: 0px;
+        bottom: 200px;
     }
     
     .nav__separate__1 {
@@ -512,6 +589,7 @@ ul li {
     }
     .call_me {
         width: 60%;
+        top: 120px;
     
     }
     .background1 {
@@ -653,9 +731,15 @@ ul li {
     }
     
     form {
+        transition: 0.2s ease-in-out;
+        padding: 40px 40px 40px 0px;
+        border-radius: 30px;
+        border:  1px solid rgba(173, 173, 250, 0.1);
+        box-shadow: 0px 50px 40px rgba(100, 100, 250, 0.3);
         width: 50%;
-        bottom: 0px;
-        left: 30px;
+        height: 400px;
+        bottom: 200px;
+        left: 70px;
         position: absolute;
         display: block;
     }

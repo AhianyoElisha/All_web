@@ -6,10 +6,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" type="image/x-icon" href="./Images/Logo.svg">
+        <link rel="shortcut icon" type="image/x-icon" href="./Images/title_logo.svg">
         <title>Plan your day</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/ffc2004906.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <link rel="stylesheet" href="./StartPage.css">
     </head>
     <body>
@@ -28,17 +31,17 @@
                             <img src="./Images/Logo.svg" alt="" class="logo">
                     </picture>
                     <ul class="nav__list" id="nav__list">
-                        <li class="btn active__link"><a href="./StartPage.html">Home</a></li>
+                        <li class="btn active__link"><a href="">Home</a></li>
                         <li class="btn"><a href="./Services.html">Services</a></li>
                         <li class="btn"><a href="./About_us.html">About</a></li>
                         <li class="btn"><a href="./Contact_us.html">Contact us</a></li>
                     </ul>
                    </div>
                     <ul class="nav__separate">
-                        <li class="login__link">Login</li>
-                        <li><button type="submit" class="get__app__button">Get App</button></li>
+                        <li class="login__link"><a href="./login.html">Login</a></li>
+                        <li><a href="./getApp.html"><button type="submit" class="get__app__button">Get App</button></a></li>
                     </ul>
-                    <div class="menu">&#9776;</div>
+                <a onclick="openNav()" class="menu" id="menu" href="#">&#9776;</a>
                 </nav>
                 <div class="icons">
                     <picture>
@@ -71,8 +74,8 @@
                 <picture>
                     <source srcset="./Images/Gold-small.png" media="(max-width: 490px)">
                     <source srcset="./Images/Gold-med.png" media="(max-width: 750px)">
-                    <source srcset="./Images/Gold-ipad.png" media="(max-width: 940px)">
-                    <source srcset="./Images/Gold-ipad-pro.png" media="(max-width: 1200px)">
+                    <source srcset="./Images/Gold-ipad.png" media="(max-width: 1010px)">
+                    <source srcset="./Images/Gold-ipad-pro.png" media="(max-width: 1300px)">
                     <source srcset="./Images/Gold.png">
                     <img src="./Images/Gold.png" class="mobile__mockup">
                 </picture>
@@ -94,7 +97,7 @@
                         </div>
                         <div class="nav__separate__1">
                             <div class="login__link__1">Login</div>
-                            <button type="submit" class="get__app__button__1">Get App</button>
+                            <a href="./getApp.html"><button type="submit" class="get__app__button__1">Get App</button></a>
                         </div>
                         <div class="something">
                             <div class="input__email">
@@ -158,7 +161,18 @@
             <section class="copyright">
             <p class="copyright__in">Copyright &#169; 2020 . All rights reserved.</p>
             </section>
-        </main>   
+        </main> 
+        <div id="mobile__menu" class="overlay">
+            <a onclick="closeNav()" class="close" href="#">&times;</a>
+            <div class="overlay__content" id="overlay__content">
+                <li class="btn active__link"><a href="">Home</a></li>
+                <li class="btn"><a href="./Services.html">Services</a></li>
+                <li class="btn"><a href="./About_us.html">About</a></li>
+                <li class="btn"><a href="./Contact_us.html">Contact us</a></li>
+                <li class="btn"><a href="./login.html">Login</a></li>
+                <li class="btn"><a href="./signUp.html">Sign Up</a></li>
+            </div>
+        </div>    
         <script src="" async defer></script>
         <script>
             // Add active class to the current button (highlight it)
@@ -170,6 +184,17 @@
               current[0].className = current[0].className.replace(" active__link", "");
               this.className += " active__link";
               });
+            }
+        </script>
+         <script type="text/javascript" async defer>
+            function openNav() {
+                document.getElementById("mobile__menu").style.height="100%";
+                document.getElementById("menu").style.display="none";
+                document.getElementById("overlay__content").style.height="100%";
+                }
+            function closeNav() {
+                document.getElementById("menu").style.display="inherit";
+                document.getElementById("mobile__menu").style.height="0";
             }
             </script>
     </body>

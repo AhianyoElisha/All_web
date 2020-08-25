@@ -9,13 +9,14 @@
         <link rel="shortcut icon" type="image/x-icon" href="./Images/title_logo.svg">
         <title>Plan your day</title>
         <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/ffc2004906.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./about.css">
+        <link rel="stylesheet" href="./signUp.css">
     </head>
     <body>
+        <!-- <a href="javascript:" id="return-to-top" style="display: inline;"><img src="./images/arrow_up [#337].svg" alt=""></a> -->
         <main>
             <header>
                 <div class="upper__curve">
@@ -33,7 +34,7 @@
                     <ul class="nav__list" id="nav__list">
                         <li class="btn"><a href="./StartPage.html">Home</a></li>
                         <li class="btn"><a href="./Services.html">Services</a></li>
-                        <li class="btn active__link"><a href=" ">About</a></li>
+                        <li class="btn"><a href="./About_us.html">About</a></li>
                         <li class="btn"><a href="./Contact_us.html">Contact us</a></li>
                     </ul>
                    </div>
@@ -43,57 +44,55 @@
                     </ul>
                     <a onclick="openNav()" class="menu" id="menu" href="#">&#9776;</a>
                 </nav>
-                <img class="humaans" src="./Images/humaaans.png" alt="">    
-                <section class="shapes">    
+                <section class="shapes">
+                    <section class="upper__curve__content">                        
                         <div class="hero__text">
                             <img src="./Images/background.svg" class="background1" alt="">
 
                             <div class="hero__font">
-                                <h1>Hi<br>I'm Elisha</h1>
-                            </div>
-                            <div class="sub__font">
-                                <p>A web developer/ designer with passion for stunning and thoughtful UI designs. Fancy designing and 
-                                    developing websites with inspired designs and help from learned developers/ designers.</p>
-                            </div>
-                             <div class="javascript">
-                                <p>Current Focus: Node // React</p>
-                            </div>
-                            <div class="hero__font">
-                                <h1>Skills</h1>
-                            </div>
-                            <div class="display">
-                                <div class="skill">
-                                    <img src="./Images/html5.svg" alt="">
-                                    <h4>HTML5</h4>
-                                </div>
-                                <div class="skill">
-                                    <img src="./Images/css3.svg" alt="">
-                                    <h4>CSS3</h4>
-                                </div>
-                                <div class="skill">
-                                    <img src="./Images/bootstrap.svg" alt="">
-                                    <h4>Bootstrap</h4>
-                                </div>
-                                <div class="skill">
-                                    <img src="./Images/github.svg" alt="">
-                                    <h4>Github</h4>
-                                </div>
-                                <div class="skill">
-                                    <img src="./Images/javascript.svg" alt="">
-                                    <h4>Javascript</h4>
-                                </div>
-                                <div class="skill">
-                                    <img src="./Images/figma.svg" alt="">
-                                    <h4>Figma</h4>
-                                </div>
+                                <h1>Sign Up</h1>
                             </div>
                         </div>
+                       
+                    </section>
+                       <form action="" method="post">
+                        <div class="form-control">
+                            <input type="text"  id="firstname" class="form_email" placeholder="first name" autofocus required>
+                            <input type="text"  id="lastname" class="form_email" placeholder="last name" required>
+                        </div>
+                        <div class="form-control">
+                            <input type="text"  id="username" class="form_email" placeholder="username" required>
+                            <input type="number"  id="phoneNumber" class="form_email" placeholder="phone number" required >
+                        </div>
+                        <div class="form-control">
+                            <input type="email"  id="email" class="form_email" placeholder="email" required>
+                            <input type="email"  id="email" class="form_email" placeholder="re-enter email" required>
+                        </div>
+                        <div class="form-control passToggle">
+                            <div class="inside__password">
+                                <input type="password" name="" id="password1" class="password" placeholder="password" required>
+                                <i class="far fa-eye" id="togglePassword1"></i>
+                            </div>
+                            <div class="inside__password">
+                                <input type="password" name="" id="password2" class="password" placeholder="re-enter password" required>
+                                <i class="far fa-eye" id="togglePassword2"></i>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <input type="submit" name="login" id="login" class="send_message" value="Sign Up">
+                        </div>
+                        <div class="nav__separate__1">
+                            <div class="login__link__1"><a href="./login.html">Login</a></div>
+                            <a href="./getApp.html"><button type="submit" class="get__app__button__1">Get App</button></a>
+                        </div>
+                    </form>
+                    
                 </section>
+                
                 <div class="lower__curve">
                     <img src="./Images/background.svg" class="background" alt="">
 
                 </div>
-                <div class="lower"></div>
             </header>
             <section class="copyright">
             <p class="copyright__in">Copyright &#169; 2020 . All rights reserved.</p>
@@ -104,24 +103,31 @@
             <div class="overlay__content" id="overlay__content">
                 <li class="btn"><a href="./StartPage.html">Home</a></li>
                 <li class="btn"><a href="./Services.html">Services</a></li>
-                <li class="btn active__link"><a href="./About_us.html">About</a></li>
+                <li class="btn"><a href="./About_us.html">About</a></li>
                 <li class="btn"><a href="./Contact_us.html">Contact us</a></li>
                 <li class="btn"><a href="./login.html">Login</a></li>
-                <li class="btn"><a href="./signUp.html">Sign Up</a></li>
+                <li class="btn active__link"><a href="./signUp.html">Sign Up</a></li>
             </div>
         </div>
         <script src="" async defer></script>
         <script>
-            // Add active class to the current button (highlight it)
-            var header = document.getElementById("nav__list");
-            var btns = header.getElementsByClassName("btn");
-            for (var i = 0; i < btns.length; i++) {
-              btns[i].addEventListener("click", function() {
-              var current = document.getElementsByClassName("active__link");
-              current[0].className = current[0].className.replace(" active__link", "");
-              this.className += " active__link";
-              });
-            }
+            const togglePassword1 = document.querySelector('#togglePassword1');
+            const password1 = document.querySelector('#password1');
+            togglePassword1.addEventListener('click',function (e) {
+                const type = password1.getAttribute('type') === 'password'? 'text': 'password';
+                password1.setAttribute('type',type);
+                this.classList.toggle('fa-eye-slash');
+                
+            })
+            const togglePassword2 = document.querySelector('#togglePassword2');
+            const password2 = document.querySelector('#password2');
+            togglePassword2.addEventListener('click', function (e) {
+                // toggle the type attribute
+                const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+                password2.setAttribute('type', type);
+                // toggle the eye slash icon
+                this.classList.toggle('fa-eye-slash');
+            });
             </script>
              <script type="text/javascript" async defer>
                 function openNav() {
@@ -133,6 +139,7 @@
                     document.getElementById("menu").style.display="inherit";
                     document.getElementById("mobile__menu").style.height="0";
                 }
-                </script>
+            </script>
     </body>
 </html>
+ 
